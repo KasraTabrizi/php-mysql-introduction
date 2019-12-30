@@ -14,8 +14,8 @@
             <form action="" method="POST">
                 <input type="text" name="email" id="email" placeholder="example@example.com">
                 <input type="password" name="password" id="password" placeholder="password">
-                <input type="button" name="Login" value="Login">
-                <input type="button" name="Sign Up" value="Sign Up">
+                <input type="button" name="login" value="Log In">
+                <input type="button" name="signup" value="Sign Up">
             </form>
         </div>
     </div>
