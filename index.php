@@ -64,7 +64,7 @@
                 <td><input type="text" name="quote_author" id=""></td>
             </tr>
             <tr>
-                <td><label for="created_at">Created Author</label></td>
+                <td><label for="created_at">Created At</label></td>
                 <td><input type="text" name="created_at" id=""></td>
             </tr>
             <tr>

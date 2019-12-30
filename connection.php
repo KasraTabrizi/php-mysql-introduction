@@ -24,13 +24,13 @@
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$_POST['first_name'],$_POST['last_name'],$_POST['username'],$_POST['gender'],$_POST['linkedin'],$_POST['github'],$_POST['email'],$_POST['preferred_language'],$_POST['avatar'],$_POST['video'],$_POST['quote'],$_POST['quote_author'],$_POST['created_at']]);
 
-    if ($pdo->query($sql) === TRUE) {
-        echo "New record created successfully";
+    if ($pdo->prepare($sql) === FALSE) {
+        echo "Error: " . $sql . "<br>" . $pdo->errorInfo();
     } else {
-        echo "Error: " . $sql . "<br>" . $pdo->error;
+        echo "New record created successfully";
     }
 
-    $pdo->close();
+    //$pdo->close();
     // Why we do this here
     return $pdo;
     }
