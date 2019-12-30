@@ -36,4 +36,13 @@
         }
     }
 
+    //CREATE TABLE FOR PROFILE LIST
+    function createTableProfileList(){
+
+    }
+
+    //CREATE TABLE FOR PROFILE
+    function createTableProfile(){
+        
+    }
 ?>
