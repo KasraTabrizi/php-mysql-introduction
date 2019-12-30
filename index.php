@@ -9,11 +9,11 @@
 </head>
 
 <?php
-    require "connection.php"
+    require "connection.php";
 ?>
 
 <body>
-    <form action="" method="POST">
+    <form action="/connection.php" method="POST">
         <table>
             <tr>
                 <td><label for="first_name">First Name</label></td>
@@ -68,7 +68,7 @@
                 <td><input type="text" name="created_at" id=""></td>
             </tr>
             <tr>
-                <td><input type="submit" value="submit"></td>
+                <td><input type="submit" value="submit" name="submit"></td>
             </tr>
         </table>
     </form>
