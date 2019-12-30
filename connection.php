@@ -29,8 +29,6 @@
     } else {
         echo "New record created successfully";
     }
-
-    //$pdo->close();
     // Why we do this here
     return $pdo;
     }
