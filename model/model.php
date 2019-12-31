@@ -31,6 +31,11 @@
         }
     }
 
+    //SEARCH DATA IN DATABASE, RETURN TRUE IF DATA IS FOUND
+    function searchInDatabase($database, $colName, $dataValue){
+    
+    }
+
     //CHECK IF ANY TEXT INPUT IS EMPTY OR NOT
     function ifInputEmpty($inputName){
         if(empty($inputName)){
