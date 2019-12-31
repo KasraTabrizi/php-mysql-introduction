@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<?php
+    require "../controller/controller.php";
+?>
+
 <body>
     <div id="wrapper">
         <h1>List of Profiles</h1>

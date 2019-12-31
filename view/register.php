@@ -9,7 +9,7 @@
 </head>
 
 <?php
-    require "../model/connection.php";
+    require "../controller/controller.php";
 ?>
 
 <body>
