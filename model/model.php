@@ -36,6 +36,11 @@
     
     }
 
+    //READ DATA FROM DATABASE
+    function readFromDatabase($database){
+
+    }
+
     //CHECK IF ANY TEXT INPUT IS EMPTY OR NOT
     function ifInputEmpty($inputName){
         if(empty($inputName)){
