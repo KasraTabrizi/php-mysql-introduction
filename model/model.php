@@ -1,5 +1,7 @@
 <?php
 
+    $errorMail = $errorPass = "";
+
     //CREATE CONNECTION WITH DATABASE
     function openConnection() {
         // Try to figure out what these should be for you

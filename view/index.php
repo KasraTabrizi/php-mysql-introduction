@@ -15,10 +15,12 @@
 
         <div id="container-login">
             <form action="" method="POST">
+                <label for="email">Email:<?php echo $errorMail; ?></label>
                 <input type="text" name="email" id="email" placeholder="example@example.com">
+                <label for="email">Password:<?php echo $errorPass; ?></label>
                 <input type="password" name="password" id="password" placeholder="password">
-                <input type="button" name="login" value="Log In">
-                <input type="button" name="signup" value="Sign Up">
+                <input type="submit" name="login" value="Log In">
+                <input type="submit" name="signup" value="Sign Up">
             </form>
         </div>
     </div>
