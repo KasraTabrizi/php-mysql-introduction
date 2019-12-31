@@ -41,13 +41,6 @@
 
     }
 
-    //CHECK IF ANY TEXT INPUT IS EMPTY OR NOT
-    function ifInputEmpty($inputName){
-        if(empty($inputName)){
-            return "Field is empty";
-        }
-    }
-
     //CREATE TABLE FOR PROFILE LIST
     function createTableProfileList(){
 
