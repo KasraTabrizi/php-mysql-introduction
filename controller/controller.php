@@ -29,9 +29,31 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
     }
     elseif(isset($_POST['register'])) {
         //CHECK IF ANY INPUT FIELD IS EMPTY
-
-        //CHECK IF EMAIL ADDRESS IS VALID
-        
+        foreach($required as $fieldName){
+            if(empty($_POST[$fieldName])){
+                $_SESSION[$fieldName] = "Empty";
+            }elseif($fieldName === 'email'){ //CHECK IF EMAIL ADDRESS IS VALID
+                if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+                    $_SESSION[$fieldName] = "email is invalid";
+                }
+                else{
+                    $_SESSION[$fieldName] = $_POST[$fieldName];
+                }
+            }
+            elseif($fieldName === 'password_register'){
+                $passwordHash = password_hash($_POST[$fieldName], PASSWORD_DEFAULT);
+                if (!password_verify($_POST['password_repeat'], $passwordHash)) {
+                    $_SESSION[$fieldName] = 'Invalid password';
+                }
+                else{
+                    $_SESSION[$fieldName] = $passwordHash;
+                }
+            }
+            else{
+                $_SESSION[$fieldName] = $_POST[$fieldName];
+            }
+        }
+        var_dump($_SESSION);
         //CHECK IF PASSWORD AND PASSWORD CONFIRM IS EQUAL
         //IF YES, HASH PASSWORD
 

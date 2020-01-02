@@ -1,7 +1,12 @@
 <?php
+    //this line makes PHP behave in a more strict way
+    declare(strict_types=1);
+    //we are going to use session variables so we need to enable sessions
+    session_start();
 
     $errorMail = $errorPass = "";
-    $required = array("first_name", "last_name", "mail", "username", "password_register", "password_repeat", "gender", "linkedin", "github", "preferred_language", "avatar", "video", "quote", "quote_author", "created_at");
+    $passwordHash = "";
+    $required = array("first_name", "last_name", "email", "username", "password_register", "password_repeat", "gender", "linkedin", "github", "preferred_language", "avatar", "video", "quote", "quote_author", "created_at");
 
     //CREATE CONNECTION WITH DATABASE
     function openConnection() {
@@ -22,7 +27,7 @@
 
     //SEND DATA FROM REGISTRATION FORM TO DATABASE
     function sendToDatabase($database, $data){
-        $sql = "INSERT INTO student (first_name, last_name, username, password_register, password_repeat, gender, linkedin, github, email, preferred_language, avatar, video, quote, quote_author, created_at)
+        $sql = "INSERT INTO student (first_name, last_name, email, username, password_register, password_repeat, gender, linkedin, github, preferred_language, avatar, video, quote, quote_author, created_at)
                         VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $database->prepare($sql);
         if ($stmt === FALSE) {
