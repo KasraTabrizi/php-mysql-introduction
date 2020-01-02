@@ -37,7 +37,7 @@
         }
     }
 
-    //SEARCH DATA IN DATABASE, RETURN TRUE IF DATA IS FOUND
+    //SEARCH DATA IN DATABASE, RETURN NULL IF DATA IS NOT FOUND OTHERWISE SEND THE ID
     function searchInDatabase($database, $colName, $dataValue){
         $sql = "SELECT `id` FROM `student` WHERE `".$colName."`='".$dataValue."'";
         var_dump($sql);

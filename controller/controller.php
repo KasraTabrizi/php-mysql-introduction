@@ -61,9 +61,11 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
             $spo = openConnection();
             //CHECK IF FIRSTNAME AND LASTNAME AND USERNAME ALREADY EXIST IN THE DATABASE
             //IF SO SEND AN ERROR
-            $check = searchInDatabase($spo, 'username', $_POST['username']);
-            
-            if($check === null){ //IF FIRSTNAME LASTNAME AND USERNAME IS UNIQUE, STORE IN DATABASE AND GO TO THE PROFILE PAGE
+            $checkFirstName = searchInDatabase($spo, 'first_name', $_POST['first_name']);
+            $checkLastName = searchInDatabase($spo, 'last_name', $_POST['last_name']);
+            $checkUserName = searchInDatabase($spo, 'username', $_POST['username']);
+            //IF FIRSTNAME LASTNAME AND USERNAME IS UNIQUE, STORE IN DATABASE AND GO TO THE PROFILE PAGE
+            if($checkFirstName  === null && $checkLastName === null && $checkUserName === null){ 
                 sendToDatabase($spo);
                 //header("Location: profile.php");
             }
