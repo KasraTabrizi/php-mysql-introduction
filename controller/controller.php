@@ -22,12 +22,10 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
             //IF NOT, GIVE ERROR USERNAME/PASSWORD DOESN'T EXIST OR IS NOT CORRECTLY WRITTEN
             
         }
-        
-
         //header("Location: index.php");
     }
     elseif(isset($_POST['signup'])) {
-        header("Location: registration.php")
+        header("Location: registration.php");
     }
     elseif(isset($_POST['register'])) {
         

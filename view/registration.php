@@ -13,7 +13,7 @@
 ?>
 
 <body>
-    <form action="/connection.php" method="POST">
+    <form action="" method="POST">
         <table>
             <tr>
                 <td><label for="first_name">First Name</label></td>
