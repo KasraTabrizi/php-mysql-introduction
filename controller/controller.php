@@ -57,12 +57,18 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
             }
         }
         if($everythingValid){
+            //CONNECT TO DATABASE
             $spo = openConnection();
-            sendToDatabase($spo);
-        }
-        
-        //IF EVERYTHING IS CORRECT, STORE IN DATABASE AND GO TO THE PROFILE PAGE
+            //CHECK IF FIRSTNAME AND LASTNAME AND USERNAME ALREADY EXIST IN THE DATABASE
+            //IF SO SEND AN ERROR
+            if(){
 
+            }
+            else{ //IF FIRSTNAME LASTNAME AND USERNAME IS UNIQUE, STORE IN DATABASE AND GO TO THE PROFILE PAGE
+                sendToDatabase($spo);
+                //header("Location: profile.php");
+            }
+        }
     }
     elseif(isset($_POST['edit'])) {
         
