@@ -65,10 +65,10 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
             
             if($check === null){ //IF FIRSTNAME LASTNAME AND USERNAME IS UNIQUE, STORE IN DATABASE AND GO TO THE PROFILE PAGE
                 sendToDatabase($spo);
+                //header("Location: profile.php");
             }
             else{ 
                 var_dump("user already exist");
-                //header("Location: profile.php");
             }
         }
     }
