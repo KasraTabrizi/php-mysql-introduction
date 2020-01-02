@@ -39,7 +39,19 @@
 
     //SEARCH DATA IN DATABASE, RETURN TRUE IF DATA IS FOUND
     function searchInDatabase($database, $colName, $dataValue){
-    
+        $sql = "SELECT `id` FROM `student` WHERE `".$colName."`='".$dataValue."'";
+        var_dump($sql);
+        $stmt = $database->query($sql);
+        if ($stmt === FALSE) {
+            echo "Error: " . $sql . "<br>" . $database->errorInfo();
+        } 
+        else{
+            foreach($stmt as $row){
+                if($row['id'] >= 0){
+                    return $row['id'];
+                }
+            } 
+        }
     }
 
     //READ DATA FROM DATABASE
