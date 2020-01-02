@@ -67,8 +67,8 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
             //IF FIRSTNAME LASTNAME AND USERNAME IS UNIQUE, STORE IN DATABASE AND GO TO THE PROFILE PAGE
             if($checkFirstName  === null && $checkLastName === null && $checkUserName === null){ 
                 sendToDatabase($spo);
-                readFromDatabase($spo, 'username', $_POST['username']);
-                //header("Location: profile.php");
+                $_SESSION['profile'] = readFromDatabase($spo, 'username', $_POST['username']);
+                header("Location: profile.php");
             }
         }
     }

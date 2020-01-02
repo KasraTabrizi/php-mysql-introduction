@@ -19,6 +19,7 @@
                 <img src="" alt="">
             </div>
             <div id="profile-description">
+                <?php //createTableProfile($_SESSION['profile']); ?>
                 <table>
                 </table>
             </div>

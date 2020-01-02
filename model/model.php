@@ -7,6 +7,8 @@
     $errorMail = $errorPass = "";
     $passwordHash = "";
     $required = array("first_name", "last_name", "email", "username", "password_register", "password_repeat", "gender", "linkedin", "github", "preferred_language", "avatar", "video", "quote", "quote_author", "created_at");
+    $profile = [];
+
 
     //CREATE CONNECTION WITH DATABASE
     function openConnection() {
@@ -57,7 +59,7 @@
     function readFromDatabase($database, $colName, $dataValue){
         $sql = "SELECT * FROM `student` WHERE `".$colName."`='".$dataValue."'";
         $stmt = $database->query($sql)->fetch();
-        var_dump($stmt);
+        return $stmt;
     }
 
     //CREATE TABLE FOR PROFILE LIST
@@ -66,7 +68,9 @@
     }
 
     //CREATE TABLE FOR PROFILE
-    function createTableProfile(){
-        
+    function createTableProfile($profile){
+        foreach($profile as $item){
+            var_dump($item);
+        }
     }
 ?>
