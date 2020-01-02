@@ -62,6 +62,13 @@
         return $stmt;
     }
 
+    //READ DATA FROM DATABASE
+    function readHash($database, $colName, $dataValue){
+        $sql = "SELECT `password` FROM `student` WHERE `".$colName."`='".$dataValue."'";
+        $stmt = $database->query($sql)->fetch();
+        return $stmt;
+    }
+
     //CREATE TABLE FOR PROFILE LIST
     function createTableProfileList(){
 

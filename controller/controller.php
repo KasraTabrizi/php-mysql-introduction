@@ -5,7 +5,6 @@ require '../model/model.php';
 if($_SERVER["REQUEST_METHOD"] === 'POST'){
     if (isset($_POST['login'])) {
         //CHECK IF EMAIL ADDRESS IS VALID
-
         //CHECK IF EMAIL ADDRESS AND PASSWORD FIELD IS EMPTY
         if(empty($_POST['email'])){
             $errorMail = "Field is empty";
@@ -20,11 +19,27 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
             //CODE THAT CHECKS IF USERNAME AND PASSWORD EXIST IN DATABASE
             //IF SO, THEN GO TO THE PROFILE PAGE
             //IF NOT, GIVE ERROR USERNAME/PASSWORD DOESN'T EXIST OR IS NOT CORRECTLY WRITTEN
-            
+            //CONNECT TO DATABASE
+            $spo = openConnection();
+            $checkUserName = searchInDatabase($spo, 'email', $_POST['email']);
+            //var_dump($checkUserName);
+            $passwordHash = readHash($spo, 'email', $_POST['email']);
+            //var_dump($passwordHash);
+            //var_dump($_POST['password_login']);
+            $checkPassWord = password_verify($_POST['password_login'], $passwordHash['password']);
+            //var_dump($checkPassWord);
+            if($checkUserName  === null || $checkPassWord === false){ 
+                var_dump("error");
+            }
+            else{
+                sendToDatabase($spo);
+                $_SESSION['profile'] = readFromDatabase($spo, 'email', $_POST['email']);
+                header("Location: profile.php");
+            }
         }
-        //header("Location: index.php");
     }
     elseif(isset($_POST['signup'])) {
+        session_unset();
         header("Location: registration.php");
     }
     elseif(isset($_POST['register'])) {

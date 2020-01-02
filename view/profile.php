@@ -13,31 +13,30 @@
 <body>
     <div id="wrapper">
         <h1>Profile Page</h1>
-
         <div id="container_profile">
             <div id="profile-img">
                 <img class="gender-icon" src="" alt="gender-icon">
                 <img class="profile-image" src="" alt="profile-image">
             </div>
-            <p class="user-name"></p>
-            <p class="quote"></p>
+            <p class="user-name"><?php echo $_SESSION['profile']['username'];?></p>
+            <p class="quote"><?php echo $_SESSION['profile']['quote'];?> ~ <?php echo $_SESSION['profile']['quote_author'];?> </p>
             <div id="profile-description">
                 <table>
                     <tr>
                         <td>First Name</td>
-                        <td></td>
+                        <td><?php echo $_SESSION['profile']['first_name'];?></td>
                     </tr>
                     <tr>
                         <td>Last Name</td>
-                        <td></td>
+                        <td><?php echo $_SESSION['profile']['last_name'];?></td>
                     </tr>
                     <tr>
                         <td>Language</td>
-                        <td></td>
+                        <td><?php echo $_SESSION['profile']['preferred_language'];?></td>
                     </tr>
                     <tr>
                         <td>Email</td>
-                        <td></td>
+                        <td><?php echo $_SESSION['profile']['email'];?></td>
                     </tr>
                 </table>
             </div>
