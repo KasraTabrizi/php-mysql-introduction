@@ -22,7 +22,7 @@
 
     //SEND DATA FROM REGISTRATION FORM TO DATABASE
     function sendToDatabase($database, $data){
-        $sql = "INSERT INTO student (first_name, last_name, username, gender, linkedin, github, email, preferred_language, avatar, video, quote, quote_author, created_at)
+        $sql = "INSERT INTO student (first_name, last_name, username, password_register, password_repeat, gender, linkedin, github, email, preferred_language, avatar, video, quote, quote_author, created_at)
                         VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $database->prepare($sql);
         if ($stmt === FALSE) {
