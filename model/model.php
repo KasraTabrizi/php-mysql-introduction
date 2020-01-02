@@ -26,14 +26,14 @@
     }
 
     //SEND DATA FROM REGISTRATION FORM TO DATABASE
-    function sendToDatabase($database, $data){
-        $sql = "INSERT INTO student (first_name, last_name, email, username, password_register, password_repeat, gender, linkedin, github, preferred_language, avatar, video, quote, quote_author, created_at)
-                        VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    function sendToDatabase($database){
+        $sql = "INSERT INTO student (first_name, last_name, email, username, password, gender, linkedin, github, preferred_language, avatar, video, quote, quote_author, created_at)
+                        VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $database->prepare($sql);
         if ($stmt === FALSE) {
             echo "Error: " . $sql . "<br>" . $database->errorInfo();
         } else {
-            $stmt->execute([$_POST['first_name'],$_POST['last_name'],$_POST['username'],$_POST['gender'],$_POST['linkedin'],$_POST['github'],$_POST['email'],$_POST['preferred_language'],$_POST['avatar'],$_POST['video'],$_POST['quote'],$_POST['quote_author'],$_POST['created_at']]);
+            $stmt->execute([$_SESSION['first_name'],$_SESSION['last_name'],$_SESSION['email'],$_SESSION['username'],$_SESSION['password_register'],$_SESSION['gender'],$_SESSION['linkedin'],$_SESSION['github'],$_SESSION['preferred_language'],$_SESSION['avatar'],$_SESSION['video'],$_SESSION['quote'],$_SESSION['quote_author'],$_SESSION['created_at']]);
         }
     }
 

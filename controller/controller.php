@@ -28,7 +28,9 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
         header("Location: registration.php");
     }
     elseif(isset($_POST['register'])) {
+        $everythingValid = false;
         //CHECK IF ANY INPUT FIELD IS EMPTY
+        //IF A FIELD IS EMPTY OR SOMETHING IS NOT CORRECT, STORE THE CORRECT AND FILLED IN FIELDS INTO A SESSION AND GIVE ERROR TO THE OTHER ONES
         foreach($required as $fieldName){
             if(empty($_POST[$fieldName])){
                 $_SESSION[$fieldName] = "Empty";
@@ -40,25 +42,25 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
                     $_SESSION[$fieldName] = $_POST[$fieldName];
                 }
             }
-            elseif($fieldName === 'password_register'){
+            elseif($fieldName === 'password_register'){ //CHECK IF PASSWORD AND PASSWORD CONFIRM IS EQUAL
                 $passwordHash = password_hash($_POST[$fieldName], PASSWORD_DEFAULT);
                 if (!password_verify($_POST['password_repeat'], $passwordHash)) {
                     $_SESSION[$fieldName] = 'Invalid password';
                 }
                 else{
-                    $_SESSION[$fieldName] = $passwordHash;
+                    $_SESSION[$fieldName] = $passwordHash; 
                 }
             }
             else{
                 $_SESSION[$fieldName] = $_POST[$fieldName];
+                $everythingValid = true;
             }
         }
-        var_dump($_SESSION);
-        //CHECK IF PASSWORD AND PASSWORD CONFIRM IS EQUAL
-        //IF YES, HASH PASSWORD
-
-        //IF A FIELD IS EMPTY OR SOMETHING IS NOT CORRECT, STORE THE CORRECT AND FILLED IN FIELDS INTO A SESSION AND GIVE ERROR TO THE OTHER ONES
-
+        if($everythingValid){
+            $spo = openConnection();
+            sendToDatabase($spo);
+        }
+        
         //IF EVERYTHING IS CORRECT, STORE IN DATABASE AND GO TO THE PROFILE PAGE
 
     }
