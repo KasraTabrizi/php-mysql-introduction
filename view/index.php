@@ -18,7 +18,7 @@
                 <label for="email">Email:<?php echo $errorMail; ?></label>
                 <input type="text" name="email" id="email" placeholder="example@example.com">
                 <label for="email">Password:<?php echo $errorPass; ?></label>
-                <input type="password" name="password" id="password" placeholder="password">
+                <input type="password" name="password_login" id="password" placeholder="password">
                 <input type="submit" name="login" value="Log In">
                 <input type="submit" name="signup" value="Sign Up">
             </form>

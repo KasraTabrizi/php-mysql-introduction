@@ -24,8 +24,20 @@
                 <td><input type="text" name="last_name" id=""></td>
             </tr>
             <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="text" name="email" id=""></td>
+            </tr>
+            <tr>
                 <td><label for="username">Username</label></td>
                 <td><input type="text" name="username" id=""></td>
+            </tr>
+            <tr>
+                <td><label for="password_register">Password</label></td>
+                <td><input type="password" name="password_register" id=""></td>
+            </tr>
+            <tr>
+                <td><label for="password_repeat">Password Repeat</label></td>
+                <td><input type="password" name="password_repeat" id=""></td>
             </tr>
             <tr>
                 <td><label for="gender">Gender</label></td>
@@ -38,10 +50,6 @@
             <tr>
                 <td><label for="github">Github</label></td>
                 <td><input type="text" name="github" id=""></td>
-            </tr>
-            <tr>
-                <td><label for="email">Email</label></td>
-                <td><input type="text" name="email" id=""></td>
             </tr>
             <tr>
                 <td><label for="preferred_language">Language</label></td>

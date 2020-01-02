@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
         if(empty($_POST['email'])){
             $errorMail = "Field is empty";
         }
-        elseif(empty($_POST['password'])){
+        elseif(empty($_POST['password_login'])){
             $errorPass = "Field is empty";
         }
         elseif(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
         //header("Location: index.php");
     }
     elseif(isset($_POST['signup'])) {
-        
+        header("Location: registration.php")
     }
     elseif(isset($_POST['register'])) {
         
