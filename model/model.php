@@ -40,7 +40,6 @@
     //SEARCH DATA IN DATABASE, RETURN NULL IF DATA IS NOT FOUND OTHERWISE SEND THE ID
     function searchInDatabase($database, $colName, $dataValue){
         $sql = "SELECT `id` FROM `student` WHERE `".$colName."`='".$dataValue."'";
-        var_dump($sql);
         $stmt = $database->query($sql);
         if ($stmt === FALSE) {
             echo "Error: " . $sql . "<br>" . $database->errorInfo();
@@ -55,8 +54,10 @@
     }
 
     //READ DATA FROM DATABASE
-    function readFromDatabase($database){
-
+    function readFromDatabase($database, $colName, $dataValue){
+        $sql = "SELECT * FROM `student` WHERE `".$colName."`='".$dataValue."'";
+        $stmt = $database->query($sql)->fetch();
+        var_dump($stmt);
     }
 
     //CREATE TABLE FOR PROFILE LIST
