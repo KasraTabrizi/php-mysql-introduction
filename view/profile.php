@@ -16,17 +16,40 @@
 
         <div id="container_profile">
             <div id="profile-img">
-                <img src="" alt="">
+                <img class="gender-icon" src="" alt="gender-icon">
+                <img class="profile-image" src="" alt="profile-image">
             </div>
+            <p class="user-name"></p>
+            <p class="quote"></p>
             <div id="profile-description">
-                <?php //createTableProfile($_SESSION['profile']); ?>
                 <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Language</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td></td>
+                    </tr>
                 </table>
             </div>
+            <ul id="social-media">
+                <li><a href=""><img class="social-icon" src="" alt=""></a></li>
+                <li><a href=""><img class="social-icon" src="" alt=""></a></li>
+                <li><a href=""><img class="social-icon" src="" alt=""></a></li>
+            </ul>
             <form action="" method="POST">
-                <input type="button" name="edit" value="Edit">
-                <input type="button" name="logout" value="Log Out">
-                <input type="button" name="backtolist" value="Back">
+                <input type="submit" name="edit" value="Edit">
+                <input type="submit" name="logout" value="Log Out">
+                <input type="submit" name="backtolist" value="Home">
             </form>
         </div>
     </div>

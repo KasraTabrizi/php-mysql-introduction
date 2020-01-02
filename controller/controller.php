@@ -73,10 +73,10 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
         }
     }
     elseif(isset($_POST['edit'])) {
-        
+        header("Location: registration.php");
     }
     elseif(isset($_POST['logout'])) {
-        
+        header("Location: index.php");
     }
     elseif(isset($_POST['backtolist'])) {
         
