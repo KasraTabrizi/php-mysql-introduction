@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
                     $_SESSION[$fieldName] = $_POST[$fieldName];
                 }
             }
-            elseif($fieldName === 'password_register'){ //CHECK IF PASSWORD AND PASSWORD CONFIRM IS EQUAL
+            elseif($fieldName === 'password_register'){ //CHECK IF PASSWORD AND PASSWORD REPEAT IS EQUAL
                 $passwordHash = password_hash($_POST[$fieldName], PASSWORD_DEFAULT);
                 if (!password_verify($_POST['password_repeat'], $passwordHash)) {
                     $_SESSION[$fieldName] = 'Invalid password';
