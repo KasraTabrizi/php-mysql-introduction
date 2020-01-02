@@ -1,6 +1,7 @@
 <?php
 
     $errorMail = $errorPass = "";
+    $required = array("first_name", "last_name", "mail", "username", "password_register", "password_repeat", "gender", "linkedin", "github", "preferred_language", "avatar", "video", "quote", "quote_author", "created_at");
 
     //CREATE CONNECTION WITH DATABASE
     function openConnection() {

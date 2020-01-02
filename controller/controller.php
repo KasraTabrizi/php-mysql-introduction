@@ -28,7 +28,17 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
         header("Location: registration.php");
     }
     elseif(isset($_POST['register'])) {
+        //CHECK IF ANY INPUT FIELD IS EMPTY
+
+        //CHECK IF EMAIL ADDRESS IS VALID
         
+        //CHECK IF PASSWORD AND PASSWORD CONFIRM IS EQUAL
+        //IF YES, HASH PASSWORD
+
+        //IF A FIELD IS EMPTY OR SOMETHING IS NOT CORRECT, STORE THE CORRECT AND FILLED IN FIELDS INTO A SESSION AND GIVE ERROR TO THE OTHER ONES
+
+        //IF EVERYTHING IS CORRECT, STORE IN DATABASE AND GO TO THE PROFILE PAGE
+
     }
     elseif(isset($_POST['edit'])) {
         
