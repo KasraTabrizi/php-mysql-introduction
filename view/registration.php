@@ -13,6 +13,9 @@
 ?>
 
 <body>
+    <?php
+        var_dump($_SESSION['first_name']);
+    ?>
     <form action="" method="POST">
         <table>
             <tr>
@@ -147,6 +150,8 @@
             </tr>
             <tr>
                 <td><input type="submit" value="Register" name="register"></td>
+                <td><input type="submit" value="Back" name="backtologin"></td>
+                <td><input type="submit" value="Save" name="save"></td>
             </tr>
         </table>
     </form>
