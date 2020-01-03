@@ -44,9 +44,9 @@
                 </table>
             
             <ul id="social-media">
-                <li><a href=""><img src="https://img.icons8.com/android/24/ffffff/linkedin.png"></a></li>
-                <li><a href=""><img src="https://img.icons8.com/material-sharp/24/ffffff/github.png"></a></li>
-                <li><a href=""><img src="https://img.icons8.com/material/24/ffffff/youtube.png"></a></li>
+                <li><a href="<?php echo $_SESSION['profile']['linkedin'];?>" target="_blank"><img src="https://img.icons8.com/android/24/ffffff/linkedin.png"></a></li>
+                <li><a href="<?php echo $_SESSION['profile']['github'];?>" target="_blank"><img src="https://img.icons8.com/material-sharp/24/ffffff/github.png"></a></li>
+                <li><a href="<?php echo $_SESSION['profile']['video'];?>" target="_blank"><img src="https://img.icons8.com/material/24/ffffff/youtube.png"></a></li>
             </ul>
         </div>
         <form action="" method="POST">
