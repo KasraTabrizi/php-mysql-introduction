@@ -39,7 +39,6 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
         }
     }
     elseif(isset($_POST['signup'])) {
-        session_unset();
         header("Location: registration.php");
     }
     elseif(isset($_POST['register'])) {
@@ -84,6 +83,7 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
                 sendToDatabase($spo);
                 $_SESSION['profile'] = readFromDatabase($spo, 'username', $_POST['username']);
                 header("Location: profile.php");
+                //var_dump($_SESSION['profile']);
             }
         }
     }

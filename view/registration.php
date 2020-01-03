@@ -21,11 +21,19 @@
                     if($_SESSION['first_name'] === "Empty"){
                         echo $_SESSION['first_name'];
                     }
+                    elseif(isset($_SESSION['first_name'])){
+                        $_SESSION['first_name'] = "";
+                        echo $_SESSION['first_name'];
+                    }
                 ?>
                 </label></td>
                 <td><input type="text" name="first_name" value=
                 <?php
                     if(!empty($_SESSION['first_name']) && $_SESSION['first_name'] !== "Empty"){
+                        echo $_SESSION['first_name'];
+                    }
+                    else{
+                        $_SESSION['first_name'] = "";
                         echo $_SESSION['first_name'];
                     }
                 ?>>
@@ -37,11 +45,19 @@
                     if($_SESSION['last_name'] === "Empty"){
                         echo $_SESSION['last_name'];
                     }
+                    elseif(isset($_SESSION['last_name'])){
+                        $_SESSION['last_name'] = "";
+                        echo $_SESSION['last_name'];
+                    }
                 ?>
                 </label></td>
                 <td><input type="text" name="last_name" id="" value=
                 <?php
                     if(!empty($_SESSION['last_name']) && $_SESSION['last_name'] !== "Empty"){
+                        echo $_SESSION['last_name'];
+                    }
+                    else{
+                        $_SESSION['last_name'] = "";
                         echo $_SESSION['last_name'];
                     }
                 ?>>
@@ -53,11 +69,19 @@
                     if($_SESSION['email'] === "Empty" || $_SESSION['email'] === "email is invalid"){
                         echo $_SESSION['email'];
                     }
+                    elseif(isset($_SESSION['email'])){
+                        $_SESSION['email'] = "";
+                        echo $_SESSION['email'];
+                    }
                 ?>
                 </label></td>
                 <td><input type="text" name="email" id="" value=
                 <?php
                     if(!empty($_SESSION['email']) && $_SESSION['email'] !== "Empty" && $_SESSION['email'] !== "email is invalid"){
+                        echo $_SESSION['email'];
+                    }
+                    else{
+                        $_SESSION['email'] = "";
                         echo $_SESSION['email'];
                     }
                 ?>>
@@ -70,9 +94,13 @@
             <tr>
                 <td><label for="password_register">Password: 
                 <?php  
-                    if($_SESSION['password_register'] === "Empty" || $_SESSION['password_register'] === "Invalid password"){
-                        echo $_SESSION['password_register'];
-                    }
+                    // if($_SESSION['password_register'] === "Empty" || $_SESSION['password_register'] === "Invalid password"){
+                    //     echo $_SESSION['password_register'];
+                    // }
+                    // elseif(isset($_SESSION['password_register'])){
+                    //     $_SESSION['password_register'] = "";
+                    //     echo $_SESSION['password_register'];
+                    // }
                 ?>
                 </label></td>
                 <td><input type="password" name="password_register" id=""></td>
