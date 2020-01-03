@@ -1,3 +1,45 @@
-
+body {
+  background: #2a3942;
+  background: linear-gradient(34deg, #2a3942 0%, #50545b 55%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+}
+body #wrapper {
+  width: 50%;
+  margin: 150px auto;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px 0px rgba(156, 156, 156, 0.56);
+}
+body #wrapper #main-container {
+  display: flex;
+  justify-content: center;
+}
+body #wrapper #left-container {
+  position: relative;
+  background: #2a3942;
+  background: linear-gradient(34deg, #2a3942 0%, #484c53 71%);
+  width: 60%;
+}
+body #wrapper #left-container #text-layer {
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+body #wrapper #login-container {
+  width: 80%;
+  background-color: whitesmoke;
+}
+body #wrapper table {
+  margin: 80px auto;
+}
+body #wrapper table td {
+  padding: 5px;
+}
 
 /*# sourceMappingURL=index.css.map */
