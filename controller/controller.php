@@ -22,12 +22,8 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
             //CONNECT TO DATABASE
             $spo = openConnection();
             $checkUserName = searchInDatabase($spo, 'email', $_POST['email']);
-            //var_dump($checkUserName);
             $passwordHash = readHash($spo, 'email', $_POST['email']);
-            //var_dump($passwordHash);
-            //var_dump($_POST['password_login']);
             $checkPassWord = password_verify($_POST['password_login'], $passwordHash['password']);
-            //var_dump($checkPassWord);
             if($checkUserName  === null || $checkPassWord === false){ 
                 var_dump("error");
             }
