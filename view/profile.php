@@ -18,10 +18,10 @@
         <div id="container-profile">
             <div id="profile-img">
                 <img class="profile-image" src="<?php echo $_SESSION['profile']['avatar'];?>" alt="gender-icon">
-                <img class="gender-icon" src="https://img.icons8.com/cotton/60/000000/male.png" alt="profile-image">
+                <img class="gender-icon" src="https://img.icons8.com/cotton/48/000000/male.png" alt="profile-image">
             </div>
             <p class="user-name"><?php echo $_SESSION['profile']['username'];?></p>
-            <p class="quote"><?php echo $_SESSION['profile']['quote'];?> ~ <?php echo $_SESSION['profile']['quote_author'];?> </p>
+            <p class="quote"><q><i><?php echo $_SESSION['profile']['quote'];?></i></q> <br>~ <?php echo $_SESSION['profile']['quote_author'];?></p>
         </div>
         <div id="profile-description">
             <table>
@@ -37,25 +37,25 @@
                         <td>Language</td>
                         <td><?php echo $_SESSION['profile']['preferred_language'];?></td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>Email</td>
                         <td><?php echo $_SESSION['profile']['email'];?></td>
-                    </tr>
+                    </tr> -->
                 </table>
             
             <ul id="social-media">
-                <li><a href=""><img src="https://img.icons8.com/color/48/000000/linkedin.png"></a></li>
-                <li><a href=""><img src="https://img.icons8.com/color/48/000000/github--v1.png"></a></li>
-                <li><a href=""><img src="https://img.icons8.com/color/48/000000/youtube.png"></a></li>
+                <li><a href=""><img src="https://img.icons8.com/android/24/ffffff/linkedin.png"></a></li>
+                <li><a href=""><img src="https://img.icons8.com/material-sharp/24/ffffff/github.png"></a></li>
+                <li><a href=""><img src="https://img.icons8.com/material/24/ffffff/youtube.png"></a></li>
             </ul>
         </div>
+        <form action="" method="POST">
         <div id="buttons-container">
-            <form action="" method="POST">
-                <input type="submit" name="edit" value="Edit" id="edit-button">
-                <input type="submit" name="logout" value="Log Out" id="logout-button">
-                <input type="submit" name="backtolist" value="Home" id="home-button">
-            </form>
-        </div>
+            <input type="submit" name="edit" value="Edit" id="edit-button">
+            <input type="submit" name="logout" value="Log Out" id="logout-button">
+            <input type="submit" name="backtolist" value="Home" id="home-button">
+            </div>
+        </form>
     </div>
 </body>
 </html>

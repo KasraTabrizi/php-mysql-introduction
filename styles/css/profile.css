@@ -4,15 +4,15 @@ body {
 }
 body #wrapper {
   width: 50%;
-  max-width: 100%;
+  max-width: 650px;
   margin: 70px auto;
   overflow: hidden;
   border-radius: 25px;
   box-shadow: 0px 0px 20px 0px #9c9c9c;
-}
-body #wrapper #container-profile {
   background: #2a3942;
   background: linear-gradient(34deg, #2a3942 0%, #484c53 71%);
+}
+body #wrapper #container-profile {
   padding-bottom: 20px;
   padding-top: 60px;
 }
@@ -33,21 +33,61 @@ body #wrapper #container-profile #profile-img .gender-icon {
   position: absolute;
   background-color: #ecca04;
   border-radius: 50%;
-  top: -2%;
-  right: 35%;
+  top: -5%;
+  right: 37%;
 }
 body #wrapper #container-profile p {
   color: whitesmoke;
   text-align: center;
 }
-body #wrapper #profile-description {
-  border: 1px solid black;
+body #wrapper #profile-description table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 30%;
+  color: rgba(245, 245, 245, 0.5);
+  text-align: center;
+}
+body #wrapper #profile-description table td {
+  border-bottom: 1px solid rgba(245, 245, 245, 0.1);
+  width: 40%;
+  padding: 5px;
 }
 body #wrapper #buttons-container {
-  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+}
+body #wrapper #buttons-container #edit-button,
+body #wrapper #buttons-container #logout-button,
+body #wrapper #buttons-container #home-button {
+  width: 100%;
+  border: none;
+  background-color: #ecca04;
+  color: #2a3942;
+  border: 2px solid whitesmoke;
+  padding: 10px;
+  margin: -5px;
+  font-weight: 800;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+body #wrapper #buttons-container #edit-button:hover,
+body #wrapper #buttons-container #logout-button:hover,
+body #wrapper #buttons-container #home-button:hover {
+  background-color: #ffd902;
+}
+body #wrapper #social-media {
+  width: 20%;
+  margin: 30px auto;
 }
 body #wrapper #social-media li {
   display: inline;
+  padding: 0 5px;
+}
+body #wrapper #social-media li img {
+  transition: 0.2s ease;
+}
+body #wrapper #social-media li img:hover {
+  transform: translateY(2px);
 }
 
 /*# sourceMappingURL=profile.css.map */
