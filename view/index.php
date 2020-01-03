@@ -17,7 +17,7 @@
             <div id="left-container">
                 <div id="text-layer">
                     <h1>Code Book</h1>
-                    <p>Better Than Facebook</p>
+                    <p>Social Platform For Programmers</p>
                 </div>
             </div> 
             <div id="login-container">
