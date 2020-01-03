@@ -18,7 +18,16 @@
         <div id="container-profile">
             <div id="profile-img">
                 <img class="profile-image" src="<?php echo $_SESSION['profile']['avatar'];?>" alt="gender-icon">
-                <img class="gender-icon" src="https://img.icons8.com/cotton/48/000000/male.png" alt="profile-image">
+                <img class="gender-icon" src=
+                    <?php
+                        if($_SESSION['profile']['gender'] === 'female'){
+                            echo "https://img.icons8.com/cotton/48/000000/female.png";
+                        }
+                        elseif($_SESSION['profile']['gender'] === 'male'){
+                            echo "https://img.icons8.com/cotton/48/000000/male.png";
+                        }
+                    ?>
+                alt="profile-image">
             </div>
             <p class="user-name"><?php echo $_SESSION['profile']['username'];?></p>
             <p class="quote"><q><i><?php echo $_SESSION['profile']['quote'];?></i></q> <br>~ <?php echo $_SESSION['profile']['quote_author'];?></p>
