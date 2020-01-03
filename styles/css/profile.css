@@ -10,30 +10,33 @@ body #wrapper {
   border-radius: 25px;
   box-shadow: 0px 0px 20px 0px #9c9c9c;
 }
-body #wrapper #container_profile {
+body #wrapper #container-profile {
   background: #2a3942;
   background: linear-gradient(34deg, #2a3942 0%, #484c53 71%);
   padding-bottom: 20px;
   padding-top: 60px;
 }
-body #wrapper #container_profile #profile-img {
+body #wrapper #container-profile .user-name {
+  font-size: 2em;
+}
+body #wrapper #container-profile #profile-img {
   position: relative;
   text-align: center;
 }
-body #wrapper #container_profile #profile-img .profile-image {
+body #wrapper #container-profile #profile-img .profile-image {
   position: relative;
-  width: 25%;
+  width: 20%;
   border-radius: 25px;
   border: 2px solid whitesmoke;
 }
-body #wrapper #container_profile #profile-img .gender-icon {
+body #wrapper #container-profile #profile-img .gender-icon {
   position: absolute;
   background-color: #ecca04;
   border-radius: 50%;
   top: -2%;
   right: 35%;
 }
-body #wrapper #container_profile p {
+body #wrapper #container-profile p {
   color: whitesmoke;
   text-align: center;
 }

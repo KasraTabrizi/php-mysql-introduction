@@ -15,7 +15,7 @@
 <body>
     <div id="wrapper">
         <!-- <h1>Profile Page</h1> -->
-        <div id="container_profile">
+        <div id="container-profile">
             <div id="profile-img">
                 <img class="profile-image" src="<?php echo $_SESSION['profile']['avatar'];?>" alt="gender-icon">
                 <img class="gender-icon" src="https://img.icons8.com/cotton/60/000000/male.png" alt="profile-image">
