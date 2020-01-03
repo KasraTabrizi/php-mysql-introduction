@@ -1,50 +1,128 @@
 body{
-    background: #2a3942;
-    background: linear-gradient(34deg, rgba(42,57,66,1) 0%, rgba(80,84,91,1) 55%);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100vh;
+    background-color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
 
-#wrapper{
-    width: 50%;
-    margin: 150px auto;
-    overflow: hidden;
-    border-radius: 25px;
-    box-shadow: 0px 0px 20px 0px rgba(156,156,156,0.56);
-    #main-container{
-        display:flex;
-        justify-content: center;
-    }
+    #wrapper{
+        width: 50%;
+        margin: 70px auto;
+        overflow: hidden;
+        border-radius: 25px;
+        box-shadow: 0px 0px 20px 0px rgb(156, 156, 156);
+        #main-container{
+            display:flex; 
+            justify-content: center;
+        }
 
-    #left-container{
-        position: relative;
-        //border: 5px solid black;
-        background: rgb(42,57,66);
-        background: linear-gradient(34deg, rgba(42,57,66,1) 0%, rgba(72,76,83,1) 71%);
-        width: 60%;
-        #text-layer{
-            text-align: center;
-            position: absolute;
-            z-index: 2;
-            width: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0.8;
+        #left-container{
+            position: relative;
+            background: rgb(42,57,66);
+            background: linear-gradient(34deg, rgba(42,57,66,1) 0%, rgba(72,76,83,1) 71%);
+            width: 60%;
+            #text-layer{
+                //font-size: 1.2em;
+                color: whitesmoke;
+                text-align: center;
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                top: 30%;
+                left: 0;
+                opacity: 0.9;
+
+                h1{
+                    font-size: 2.5em;
+                }
+            }
+        }
+        #login-container{
+            width: 70%;
+            background-color: whitesmoke;
+            padding: 20px;
+
+            h2{
+                padding-left: 8px;
+                color: rgba(42, 57, 66, 0.850);
+            }
+
+            .line{
+                width: 7%;
+                border: 4px solid rgba(42, 57, 66, 0.753);
+                margin-left: 8px;
+                border-radius: 50px;
+            }
+
+            table{
+                //border: 1px solid black;
+                border-collapse: collapse;
+                margin: 80px auto;
+                width: 100%;
+                td{
+                    width: 100%;
+                    padding: 10px;
+
+                    span{
+                        font-size: 0.8em;
+                        opacity: 0.4;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            label{
+                opacity: 0.4;
+            }
+
+            input[type=text],
+            input[type=password]{
+                border: none;
+                background-color: transparent;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                width: 100%;
+                margin-bottom: 10px;
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            #signup-button{
+                border: none;
+                background-color: transparent;
+                color: rgb(236, 202, 4);
+                font-weight: 700;
+                transition: 0.2s ease-in;
+                cursor: pointer;
+
+                &:focus{
+                    outline: none;
+                }
+
+                &:hover{
+                    color: rgb(173, 148, 1);
+                }
+            }
+
+            #login-button{
+                width: 100%;
+                border: none;
+                background-color: rgb(236, 202, 4);
+                color: rgba(42,57,66,1);
+                border-radius: 15px;
+                padding: 15px;
+                font-weight: 800;
+                transition: 0.2s ease-in;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: rgb(255, 217, 2);
+                    //transform: scale(0.98);
+                }
+            }
         }
     }
-    #login-container{
-        width: 80%;
-        background-color: whitesmoke;
+
+    footer{
+        text-align: center;
+        color: rgba(42, 57, 66, 0.850);
+        font-size: 0.8em;
     }
-
-    table{
-        margin: 80px auto;
-
-
-        td{
-            padding: 5px;
-        }
-      }
-}
-
 }
