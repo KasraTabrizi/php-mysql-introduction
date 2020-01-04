@@ -1,3 +1,69 @@
-
+body {
+  background-color: whitesmoke;
+  font-family: "Rubik", sans-serif;
+}
+body #wrapper {
+  width: 50%;
+  max-width: 800px;
+  margin: 70px auto;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px 0px #9c9c9c;
+}
+body #wrapper #header-container {
+  background: #2a3942;
+  background: linear-gradient(34deg, #2a3942 0%, #484c53 71%);
+  text-align: center;
+  color: whitesmoke;
+  font-size: 2em;
+  padding: 15px 0;
+}
+body #wrapper #form-container table {
+  border-collapse: collapse;
+  margin: 25px auto;
+  width: 90%;
+  color: #2a3942;
+}
+body #wrapper #form-container table td {
+  width: 30%;
+  padding: 7px;
+}
+body #wrapper #form-container label {
+  opacity: 0.4;
+}
+body #wrapper #form-container input[type=text],
+body #wrapper #form-container input[type=password] {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+body #wrapper #form-container input[type=text]:focus,
+body #wrapper #form-container input[type=password]:focus {
+  outline: none;
+}
+body #wrapper #buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+body #wrapper #buttons-container #register-button,
+body #wrapper #buttons-container #back-button,
+body #wrapper #buttons-container #save-button {
+  width: 100%;
+  border: none;
+  background-color: #e7c504;
+  color: #2a3942;
+  border: 2px solid whitesmoke;
+  padding: 10px;
+  margin: -5px;
+  font-weight: 800;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+body #wrapper #buttons-container #register-button:hover,
+body #wrapper #buttons-container #back-button:hover,
+body #wrapper #buttons-container #save-button:hover {
+  background-color: #ffd902;
+}
 
 /*# sourceMappingURL=registration.css.map */

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/css/registration.css">
 </head>
 
 <?php
@@ -14,77 +16,77 @@
 
 <body>
     <div id="wrapper">
-        <h1>Registration Form</h1>
+        <div id="header-container">Registration Form</div>
         <div id="form-container">
             <form action="" method="POST">
                 <table>
                     <tr>
                         <td><label for="first_name">First Name: 
                         <?php  
-                            if($_SESSION['first_name'] === "Empty"){
-                                echo $_SESSION['first_name'];
-                            }
-                            elseif(isset($_SESSION['first_name'])){
-                                $_SESSION['first_name'] = "";
-                                echo $_SESSION['first_name'];
-                            }
+                            // if($_SESSION['first_name'] === "Empty"){
+                            //     echo $_SESSION['first_name'];
+                            // }
+                            // elseif(isset($_SESSION['first_name'])){
+                            //     $_SESSION['first_name'] = "";
+                            //     echo $_SESSION['first_name'];
+                            // }
                         ?>
                         </label></td>
                         <td><input type="text" name="first_name" value=
                         <?php
-                            if(!empty($_SESSION['first_name']) && $_SESSION['first_name'] !== "Empty"){
-                                echo $_SESSION['first_name'];
-                            }
-                            else{
-                                $_SESSION['first_name'] = "";
-                                echo $_SESSION['first_name'];
-                            }
+                            // if(!empty($_SESSION['first_name']) && $_SESSION['first_name'] !== "Empty"){
+                            //     echo $_SESSION['first_name'];
+                            // }
+                            // else{
+                            //     $_SESSION['first_name'] = "";
+                            //     echo $_SESSION['first_name'];
+                            // }
                         ?>>
                         </td>
                         <td><label for="last_name">Last Name: 
                         <?php  
-                            if($_SESSION['last_name'] === "Empty"){
-                                echo $_SESSION['last_name'];
-                            }
-                            elseif(isset($_SESSION['last_name'])){
-                                $_SESSION['last_name'] = "";
-                                echo $_SESSION['last_name'];
-                            }
+                            // if($_SESSION['last_name'] === "Empty"){
+                            //     echo $_SESSION['last_name'];
+                            // }
+                            // elseif(isset($_SESSION['last_name'])){
+                            //     $_SESSION['last_name'] = "";
+                            //     echo $_SESSION['last_name'];
+                            // }
                         ?>
                         </label></td>
                         <td><input type="text" name="last_name" id="" value=
                         <?php
-                            if(!empty($_SESSION['last_name']) && $_SESSION['last_name'] !== "Empty"){
-                                echo $_SESSION['last_name'];
-                            }
-                            else{
-                                $_SESSION['last_name'] = "";
-                                echo $_SESSION['last_name'];
-                            }
+                            // if(!empty($_SESSION['last_name']) && $_SESSION['last_name'] !== "Empty"){
+                            //     echo $_SESSION['last_name'];
+                            // }
+                            // else{
+                            //     $_SESSION['last_name'] = "";
+                            //     echo $_SESSION['last_name'];
+                            // }
                         ?>>
                         </td>
                     </tr>
                     <tr>
                         <td><label for="email">Email: 
                         <?php  
-                            if($_SESSION['email'] === "Empty" || $_SESSION['email'] === "email is invalid"){
-                                echo $_SESSION['email'];
-                            }
-                            elseif(isset($_SESSION['email'])){
-                                $_SESSION['email'] = "";
-                                echo $_SESSION['email'];
-                            }
+                            // if($_SESSION['email'] === "Empty" || $_SESSION['email'] === "email is invalid"){
+                            //     echo $_SESSION['email'];
+                            // }
+                            // elseif(isset($_SESSION['email'])){
+                            //     $_SESSION['email'] = "";
+                            //     echo $_SESSION['email'];
+                            // }
                         ?>
                         </label></td>
                         <td><input type="text" name="email" id="" value=
                         <?php
-                            if(!empty($_SESSION['email']) && $_SESSION['email'] !== "Empty" && $_SESSION['email'] !== "email is invalid"){
-                                echo $_SESSION['email'];
-                            }
-                            else{
-                                $_SESSION['email'] = "";
-                                echo $_SESSION['email'];
-                            }
+                            // if(!empty($_SESSION['email']) && $_SESSION['email'] !== "Empty" && $_SESSION['email'] !== "email is invalid"){
+                            //     echo $_SESSION['email'];
+                            // }
+                            // else{
+                            //     $_SESSION['email'] = "";
+                            //     echo $_SESSION['email'];
+                            // }
                         ?>>
                         </td>
                     </tr>
@@ -144,12 +146,12 @@
                         <td><label for="created_at">Created At: </label></td>
                         <td><input type="text" name="created_at" id=""></td>
                     </tr>
-                    <tr>
-                        <td><input type="submit" value="Register" name="register"></td>
-                        <td><input type="submit" value="Back" name="backtologin"></td>
-                        <td><input type="submit" value="Save" name="save"></td>
-                    </tr>
                 </table>
+                <div id="buttons-container">
+                    <input type="submit" value="Register" name="register" id="register-button">
+                    <input type="submit" value="Back" name="backtologin" id="back-button">
+                    <input type="submit" value="Save" name="save" id="save-button">
+                </div>
             </form>
         </div>
     </div>
