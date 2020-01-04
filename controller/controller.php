@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
         elseif(empty($_POST['password_login'])){
             $errorPass = "Field is empty";
         }
-        elseif(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        elseif(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
             $errorMail = "email address is invalid";
         }
         else{
@@ -28,7 +28,6 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
                 var_dump("error");
             }
             else{
-                //readFromDatabase($spo, 'email', $_POST['email']);
                 $_SESSION['profile'] = readFromDatabase($spo, 'email', $_POST['email']);
                 header("Location: profile.php");
             }
