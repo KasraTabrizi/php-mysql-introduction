@@ -11,7 +11,6 @@
 <?php
     require "../controller/controller.php";
 ?>
-
 <body>
     <div id="wrapper">
         <!-- <h1>Profile Page</h1> -->

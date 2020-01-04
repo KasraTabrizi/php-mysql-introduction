@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
                 var_dump("error");
             }
             else{
-                sendToDatabase($spo);
+                //readFromDatabase($spo, 'email', $_POST['email']);
                 $_SESSION['profile'] = readFromDatabase($spo, 'email', $_POST['email']);
                 header("Location: profile.php");
             }
