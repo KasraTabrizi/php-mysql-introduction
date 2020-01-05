@@ -149,8 +149,7 @@
                 </table>
                 <div id="buttons-container">
                     <?php 
-                    var_dump($fromProfile);
-                        if($fromProfile){
+                        if($_SESSION['fromProfile']){
                             
                             echo '<input type="submit" value="Save" name="save" id="save-button">';
                         }

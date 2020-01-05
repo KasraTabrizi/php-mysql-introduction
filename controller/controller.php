@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
         }
     }
     elseif(isset($_POST['signup'])) {
-        $fromProfile = false;
+        $_SESSION['fromProfile'] = false;
         header("Location: registration.php");
     }
     elseif(isset($_POST['register'])) {
@@ -84,8 +84,7 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
         }
     }
     elseif(isset($_POST['edit'])) {
-        $fromProfile = true;
-        //var_dump($fromProfile);
+        $_SESSION['fromProfile'] = true;
         header("Location: registration.php");
     }
     elseif(isset($_POST['logout'])) {
