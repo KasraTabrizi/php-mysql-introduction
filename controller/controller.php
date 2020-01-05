@@ -91,6 +91,7 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
         header("Location: index.php");
     }
     elseif(isset($_POST['backtolist'])) {
+        header("Location: profile_list.php");
     }
 }
 ?>
