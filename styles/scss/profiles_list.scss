@@ -30,7 +30,7 @@ body{
             .profile-box{
                 padding: 10px;
                 padding-top: 20px;
-                
+                width: 250px;
                 .user-name{
                     font-size: 1.5em;
                 }
@@ -38,7 +38,7 @@ body{
                 .profile-img{
                     position: relative;
                     .profile-image{
-                        width: 200px;
+                        width: 150px;
                         border-radius: 25px;
                         border: 2px solid whitesmoke;
                     }
@@ -48,7 +48,7 @@ body{
                         background-color: rgb(236, 202, 4);
                         border-radius: 50%;
                         top: -6%;
-                        right: 10%;
+                        right: 15%;
                     }
                 }
                 p{

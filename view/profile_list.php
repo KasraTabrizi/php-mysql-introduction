@@ -15,24 +15,28 @@
 <body>
     <h1>List of Profiles</h1>
     <div id="wrapper">
-        <?php  for($i = 0; $i < 20; $i++){ ?>
+        <?php  
+         $database = openConnection();
+         $sql = "SELECT * FROM `student`";
+         foreach ($database->query($sql) as $row) {
+        ?>
         <div class="container-profilelist">
                 <div class="profile-box">
                     <div class="profile-img">
-                        <img class="profile-image" src="<?php echo $_SESSION['profile']['avatar'];?>" alt="profile-image">
+                        <img class="profile-image" src="<?php echo $row['avatar'];?>" alt="profile-image">
                         <img class="gender-icon" src=
                             <?php
-                                if($_SESSION['profile']['gender'] === 'female'){
+                                if($row['gender'] === 'female'){
                                     echo "https://img.icons8.com/cotton/48/000000/female.png";
                                 }
-                                elseif($_SESSION['profile']['gender'] === 'male'){
+                                elseif($row['gender'] === 'male'){
                                     echo "https://img.icons8.com/cotton/48/000000/male.png";
                                 }
                             ?>
                         alt="gender-icon">
                     </div>
-                        <p class="user-name"><?php echo $_SESSION['profile']['username'];?></p>
-                        <p class="quote"><q><i><?php echo $_SESSION['profile']['quote'];?></i></q> <br>~ <?php echo $_SESSION['profile']['quote_author'];?></p>
+                        <p class="user-name"><?php echo $row['username'];?></p>
+                        <p class="quote"><q><i><?php echo $row['quote'];?></i></q> <br>~ <?php echo $row['quote_author'];?></p>
                 </div>
         </div>
         <?php } ?>
