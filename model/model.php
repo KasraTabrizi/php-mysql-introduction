@@ -8,6 +8,7 @@
     $passwordHash = "";
     $required = array("first_name", "last_name", "email", "username", "password_register", "password_repeat", "gender", "linkedin", "github", "preferred_language", "avatar", "video", "quote", "quote_author", "created_at");
     $profile = [];
+    $fromProfile = false;
 
 
     //CREATE CONNECTION WITH DATABASE
@@ -69,15 +70,4 @@
         return $stmt;
     }
 
-    //CREATE TABLE FOR PROFILE LIST
-    function createTableProfileList(){
-
-    }
-
-    //CREATE TABLE FOR PROFILE
-    function createTableProfile($profile){
-        foreach($profile as $item){
-            var_dump($item);
-        }
-    }
 ?>

@@ -148,9 +148,17 @@
                     </tr>
                 </table>
                 <div id="buttons-container">
-                    <input type="submit" value="Register" name="register" id="register-button">
+                    <?php 
+                    var_dump($fromProfile);
+                        if($fromProfile){
+                            
+                            echo '<input type="submit" value="Save" name="save" id="save-button">';
+                        }
+                        else{
+                            echo '<input type="submit" value="Register" name="register" id="register-button">';
+                        }
+                    ?>
                     <input type="submit" value="Back" name="backtologin" id="back-button">
-                    <input type="submit" value="Save" name="save" id="save-button">
                 </div>
             </form>
         </div>
